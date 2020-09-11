@@ -10,7 +10,7 @@ public class ATMConfig {
 
     @Bean
     public DataSource dataSource() {
-        return new DataSourceDB();
+        return new DataSourceFile("customers.txt");
     }
 
     @Bean
@@ -21,5 +21,10 @@ public class ATMConfig {
     @Bean
     public ATM atm() {
         return new ATM(bank());
+    }
+
+    @Bean
+    public AtmUI atmUI() {
+        return new AtmUI(atm());
     }
 }

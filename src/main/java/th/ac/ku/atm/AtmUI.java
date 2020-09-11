@@ -10,7 +10,6 @@ public class AtmUI {
 	private ATM atm;
 
 	public AtmUI(ATM atm) {
-//		atm = new ATM();
 		this.atm = atm;
 	}
 
